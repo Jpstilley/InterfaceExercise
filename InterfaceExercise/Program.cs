@@ -42,6 +42,9 @@ namespace InterfaceExercise
 
             //Now, create objects of your 3 classes and give their members values;
 
+            var newVehcile = VehicleFactory.GetVehicle();
+            newVehcile.Drive();
+
             var murcielago = new Car()
             {
                 Name = "Lambourgini",
@@ -81,11 +84,14 @@ namespace InterfaceExercise
                 HasBackseatVideoScreen = true
             };
 
-            var vehicleList = new List<Vehicle>();
+            
+
+            var vehicleList = new List<IVehicle>();
 
             vehicleList.Add(murcielago);
             vehicleList.Add(silverado);
             vehicleList.Add(modelX);
+            
 
             //Creatively display and organize their values
 
@@ -93,6 +99,8 @@ namespace InterfaceExercise
             {
                 vehicle.PrintVehcileInfo();
             }
+
+           
         }
     }
 }

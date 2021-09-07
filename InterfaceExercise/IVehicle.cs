@@ -10,5 +10,11 @@ namespace InterfaceExercise
         public string FrameMaterial { get; set; }
 
         public void HonkHorn();
+
+        public void PrintVehcileInfo();
+
+        public string RemoveFirstPart();
+
+        public void Drive();
     }
 }

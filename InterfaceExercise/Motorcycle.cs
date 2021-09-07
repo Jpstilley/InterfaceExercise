@@ -1,11 +1,8 @@
 ﻿using System;
 namespace InterfaceExercise
 {
-    public class Car : IVehicle, ICompany
+    public class Motorcycle: IVehicle, ICompany
     {
-        public bool IsSuperCar { get; set; }
-        public int NumberOfDoors { get; set; }
-
         public int Wheels { get; set; }
         public string EngineType { get; set; }
         public string ExhaustType { get; set; }
@@ -15,19 +12,14 @@ namespace InterfaceExercise
         public string Name { get; set; }
         public string Model { get; set; }
 
-        public Car()
+        public Motorcycle()
         {
 
         }
 
         public void PrintVehcileInfo()
         {
-            Console.WriteLine($"A {Name} {Model} is a {RemoveFirstPart()}.\nIt {WriteSuperCar()} with a {EngineType} and has {NumberOfDoors} doors.\nIt has a {ExhaustType} exhaust and its frame is made of {FrameMaterial}.\n\n");
-        }
-
-        public string WriteSuperCar()
-        {
-            return (IsSuperCar) ? "is a Supercar" : "is not a Supercar";
+            Console.WriteLine($"A {Name} {Model} is a {RemoveFirstPart()}.\nIt has a {EngineType} engine.\nIt has a {ExhaustType} exhaust and its frame is made of {FrameMaterial}.\n\n");
         }
 
         public string RemoveFirstPart()
@@ -37,12 +29,12 @@ namespace InterfaceExercise
 
         public void HonkHorn()
         {
-            Console.WriteLine("meep meep");
+            Console.WriteLine("toot toot");
         }
 
         public void Drive()
         {
-            Console.WriteLine($"Building a {RemoveFirstPart()}");
+            Console.WriteLine($"\nBuilding a {RemoveFirstPart()}");
         }
     }
 }
